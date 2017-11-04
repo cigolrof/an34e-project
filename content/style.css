@@ -1,0 +1,33 @@
+body {
+     background-image: url("img/floresta.jpg");
+}
+.base{
+	background-color: white;
+	font-family: arial black;
+	padding: 20px 10 px 10 px 10 px;
+	height: 300px;
+	width: 20%;
+	margin-top: 10%;
+	margin-left: 40%;
+    padding-top: 10px;
+    border-radius: 5px;
+
+
+}
+
+.text{
+	font-family: inherit;
+	color: #696969;
+}
+
+.form{
+	style="width:75%;
+	height:auto;
+
+}
+
+.img{
+	width: 20%;
+	height: 20%;
+}
+
