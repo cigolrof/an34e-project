@@ -5,8 +5,7 @@ using System.Linq;
 using System.Web;
 
 namespace BancoDominio {
-    public class Customer
-    {
+    public class Customer {
         public Int32 Id { get; set; }
         public String Name { get; set; }
         public String Responsible { get; set; }

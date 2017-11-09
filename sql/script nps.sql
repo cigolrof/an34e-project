@@ -40,6 +40,7 @@ create table dbo.questions(
 	 id int IDENTITY(1,1) NOT NULL
 	,question varchar(400) default('')
 	,level int
+	,level_required int
 	,removed int NOT NULL default(0)
 	,constraint pk_id_questions primary key(id)
 )
