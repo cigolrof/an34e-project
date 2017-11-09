@@ -12,9 +12,7 @@ namespace DataBase {
             connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             return connection;
         }
-
         private SqlParameterCollection sqlParameterCollection = new SqlCommand().Parameters;
-
         private SqlCommand CreateCommand(CommandType cmdType, string procedure) {
 
             connection = CreateConection();
@@ -30,14 +28,12 @@ namespace DataBase {
             }
             return cmd;
         }
-
         protected void AddParameter(string parameterName, object parameterValue) {
             sqlParameterCollection.AddWithValue(parameterName, parameterValue);
         }
         protected void ClearParameter() {
             sqlParameterCollection.Clear();
         }
-
         protected object ExecuteCommand(CommandType cmdType, string procedure) {
             try {
                 SqlCommand cmd = CreateCommand(cmdType, procedure);
@@ -48,7 +44,6 @@ namespace DataBase {
                 connection.Close();
             }
         }
-
         protected DataTable ExecuteQuery(CommandType cmdType, string procedure) {
             try {
                 SqlCommand cmd = CreateCommand(cmdType, procedure);
