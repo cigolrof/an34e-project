@@ -1,0 +1,53 @@
+body {
+     background-image: url("../img/floresta.jpg");
+}
+.base{
+	background-color: white;
+	font-family: arial black;
+	padding: 20px 10px 10px 10px;
+	height: 300px;
+	width: 20%;
+	margin-top: 10%;
+	margin-left: 40%;
+    padding-top: 10px;
+    border-radius: 5px;
+
+
+}
+.button{
+	height: 35px;
+	width: 35px;
+	color: #696969;
+	border: #696969;
+	background-color: #ADD8E6;
+}
+
+.question{
+	font-size: 20px;
+	color: #696969;
+}
+
+.basepesquisa{
+	background-color: white;
+	padding: 20px;
+	height: 100%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+.text{
+	font-family: inherit;
+	color: #696969;
+}
+
+.form{
+	width:75%;
+	height:auto;
+
+}
+
+.img{
+	width: 20%;
+	height: 20%;
+}
+
