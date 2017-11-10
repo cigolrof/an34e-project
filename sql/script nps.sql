@@ -66,6 +66,15 @@ create table dbo.avaliations_participants(
 )
 go
 
+create table dbo.users (
+	 id int IDENTITY(1,1) NOT NULL
+	,login varchar(100) NOT NULL
+	,password varchar(100) NOT NULL
+	,is_admin bit default(0) NOT NULL
+	,removed bit default(0) NOT NULL
+)
+go
+
 -- Procedures
 create procedure insertAvaliation
 @Code nvarchar(150),

@@ -48,6 +48,8 @@
     <Compile Include="Question.cs" />
     <Compile Include="Repositories\AvaliationRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataBase\BancoAcessaDados.csproj">
