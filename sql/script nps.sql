@@ -7,6 +7,7 @@ go
 use 
 nps
 
+-- Tabelas
 create table dbo.avaliations(
 	 id int IDENTITY(1,1) NOT NULL
 	,code nvarchar(150) NOT NULL
@@ -64,3 +65,42 @@ create table dbo.avaliations_participants(
 	,constraint fk_id_questions_avaliations_participants foreign key (id_questions) references dbo.questions(id)
 )
 go
+
+-- Procedures
+create procedure insertAvaliation
+@Code nvarchar(150),
+@Month nvarchar(10),
+@Year nvarchar(6),
+@Area int,
+@Finished bit,
+@Detrators int,
+@Neutrals int,
+@Promoters int,
+@Result decimal(5,2)
+as
+begin
+	insert into avaliations 
+	(code, month, year, area, finished, detrators, neutrals, promoters, result)
+	values
+	(@Code, @Month, @Year, @Area, @Finished, @Detrators, @Neutrals, @Promoters, @Result)
+	select @@IDENTITY as return_id
+end
+
+
+create procedure InsertCustomer
+@Nome as nvarchar(150),
+@Responsible as nvarchar(150),
+@Area as int,
+@NpsStatus as int,
+@CustomerSince as date,
+@LastAvaliation as date
+as
+begin
+	insert into customers 
+	(name, responsible, area, nps_status, customer_since, last_avaliation)
+	values
+	(@Nome, @Responsible, @Area, @NpsStatus, @CustomerSince, @LastAvaliation)
+	select @@IDENTITY as return_id
+end
+
+	

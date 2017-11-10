@@ -23,5 +23,26 @@ namespace BancoDominio.Repositories {
         public string searchId(int id) {
             throw new NotImplementedException();
         }
+        public string Insert(Customer entity) {
+            try {
+
+                ClearParameter();
+                AddParameter("@Nome", entity.Name);
+                AddParameter("@Responsible", entity.Responsible);
+                AddParameter("@Area", entity.Area);
+                AddParameter("@NpsStatus", entity.NpsStatus);
+                AddParameter("@CustomerSince", entity.CustomerSince);
+                AddParameter("@LastAvaliation", entity.LastAvaliation);                
+
+                return null;
+            } catch (Exception ex) {
+
+                return ex.Message;
+            }            
+        }
+
+        public string Alter(Customer entity) {
+            return null;
+        }
     }
 }
