@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Avaliation.cs" />
-    <Compile Include="Busines\CustomerBusines.cs" />
     <Compile Include="Interfaces\ICustomerBusines.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,7 +55,9 @@
       <Name>BancoAcessaDados</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Busines\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

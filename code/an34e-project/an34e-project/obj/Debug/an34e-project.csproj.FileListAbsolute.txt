@@ -72,3 +72,7 @@ C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\an34e-pro
 C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\an34e-project\obj\Debug\an34e-project.csprojResolveAssemblyReference.cache
 C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\an34e-project\obj\Debug\an34e-project.dll
 C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\an34e-project\obj\Debug\an34e-project.pdb
+C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\an34e-project\bin\BancoDominio.dll
+C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\an34e-project\bin\DataBase.dll
+C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\an34e-project\bin\BancoDominio.pdb
+C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\an34e-project\bin\DataBase.pdb

@@ -3,3 +3,4 @@ C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\DataBase\
 C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\DataBase\bin\Debug\DataBase.pdb
 C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\DataBase\obj\Debug\DataBase.dll
 C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\DataBase\obj\Debug\DataBase.pdb
+C:\Users\carlos.santos\Desktop\GitHub\an34e-project\code\an34e-project\DataBase\obj\Debug\BancoAcessaDados.csprojResolveAssemblyReference.cache
