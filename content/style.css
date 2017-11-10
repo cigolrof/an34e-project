@@ -4,7 +4,7 @@ body {
 .base{
 	background-color: white;
 	font-family: arial black;
-	padding: 20px 10 px 10 px 10 px;
+	padding: 20px 10px 10px 10px;
 	height: 300px;
 	width: 20%;
 	margin-top: 10%;
@@ -13,6 +13,18 @@ body {
     border-radius: 5px;
 
 
+}
+
+.question{
+	font-size: 20px;
+}
+
+.basepesquisa{
+	background-color: white;
+	padding: 20px;
+	height: 100%;
+	margin-right: 5%;
+	margin-left: 5%;
 }
 
 .text{
