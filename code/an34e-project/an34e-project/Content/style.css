@@ -14,6 +14,24 @@ body {
 
 
 }
+
+.sair {
+    color: #696969;
+    background-color: #ADD8E6;
+    margin-top: 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+.superior {
+    float: left;
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    background-color: white;
+    border-radius: 5px;
+}
+
 .button{
 	height: 35px;
 	width: 35px;
