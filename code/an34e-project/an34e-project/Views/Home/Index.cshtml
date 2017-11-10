@@ -8,7 +8,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html:charset=utf-8">
     <title> NPS </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../Content/style.css">
 </head>
 
@@ -21,10 +22,10 @@
             <div class="form">
                 <div class="text">NPS</div>
                 <form action="/Users/SaveLogin" method="post" charset="utf-8">
-
-                    <input type="email" id="email" name="email" value="" placeholder="E-mail" style="outline:none;" required size="25" />
-
-                    <input type="password" id="password" name="password" class="email" value="" placeholder="Senha" required style="outline: none;" charset="utf-8" size="25" />
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" value="" placeholder="E-mail" class="form-control" />
+                        <input type="password" id="password" name="password" class="form-control" value="" placeholder="Senha" required charset="utf-8"/>
+                    </div>
                     <p>
                         <input type="submit" style="width:80%;height:35px; background-color: #696969; color: white;outline: none;" value="Entrar" placeholder="" charset="utf-8" />
                 </form>
