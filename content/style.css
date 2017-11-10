@@ -14,9 +14,17 @@ body {
 
 
 }
+.button{
+	height: 35px;
+	width: 35px;
+	color: #696969;
+	border: #696969;
+	background-color: #ADD8E6;
+}
 
 .question{
 	font-size: 20px;
+	color: #696969;
 }
 
 .basepesquisa{
