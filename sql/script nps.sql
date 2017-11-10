@@ -103,4 +103,17 @@ begin
 	select @@IDENTITY as return_id
 end
 
-	
+create procedure searchIdCustomer
+@Id as int
+as 
+begin
+	select * from customers
+	where id = @Id and removed = 0
+end
+
+create procedure listAllCustomers
+as 
+begin
+	select * from customers
+	where removed = 0
+end
