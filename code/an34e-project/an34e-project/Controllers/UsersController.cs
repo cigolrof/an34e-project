@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace an34e_project.Controllers
 {
@@ -33,6 +34,13 @@ namespace an34e_project.Controllers
             {
                 return Redirect("/Home/Index");
             }
+        }
+
+        public ActionResult Logoff()
+        {
+            Session.Clear();
+            FormsAuthentication.SignOut();
+            return Redirect("/Home/Index");
         }
     }
 }
