@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace an34e_project.Controllers
+{
+    public class UsersController : Controller
+    {
+        // GET: Users
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult SaveLogin(FormCollection formData)
+        {
+            var senha = formData["password"].ToString();
+            var login = formData["email"].ToString();
+
+            Session["User"] = login;
+
+            //var senhaCriptografada = Models.User.getHashSha256(senha);
+
+            var l = Models.User.Logar(login, senha);
+
+            if (l == true)
+            {
+                return Redirect("/Home/About");
+            }
+            else
+            {
+                return Redirect("/Home/Index");
+            }
+        }
+    }
+}

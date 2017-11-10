@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Avaliation.cs" />
+    <Compile Include="Interfaces\IUserBusines.cs" />
     <Compile Include="Interfaces\ICustomerBusines.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
