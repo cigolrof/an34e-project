@@ -9,13 +9,7 @@ namespace an34e_project.Controllers
 {
     public class UsersController : Controller
     {
-        // GET: Users
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult SaveLogin(FormCollection formData)
+        public ActionResult Login(FormCollection formData)
         {
             var senha = formData["password"].ToString();
             var login = formData["email"].ToString();
