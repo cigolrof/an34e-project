@@ -8,11 +8,26 @@
     <meta http-equiv="content-type" content="text/html:charset=utf-8">
     <title> NPS </title>
     <link rel="stylesheet" href="../../Content/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        function logoff() {
+            $.ajax({
+                url: '/Users/Logoff',
+                type: 'POST',
+                data: {},
+                error: function (jqXHR, textStatus, errorThrown) { },
+                success: function (data, textStatus, jqXHR) {
+                    window.location.href = "/Home/Index";
+                }
+            });
+        }
+       
+    </script>
 </head>
 
 <body>
     <div class=superior>
-        <button class="sair"> logout</button>
+        <button class="sair" onclick="logoff()"> logout</button>
     </div>
 
     <br><br><br><br>
