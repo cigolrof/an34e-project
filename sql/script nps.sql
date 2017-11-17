@@ -8,6 +8,16 @@ use
 nps
 
 -- Tabelas
+create table dbo.users (
+	 id int IDENTITY(1,1) NOT NULL
+	,login varchar(100) NOT NULL
+	,password varchar(100) NOT NULL
+	,is_admin bit default(0) NOT NULL
+	,removed bit default(0) NOT NULL
+	,constraint pk_id_users primary key (id)
+)
+go
+
 create table dbo.avaliations(
 	 id int IDENTITY(1,1) NOT NULL
 	,code nvarchar(150) NOT NULL
@@ -19,8 +29,10 @@ create table dbo.avaliations(
 	,neutrals int default(0) 
 	,promoters int default(0) 
 	,result decimal(5, 2) default(0.0) 
-	,removed int default(0) 
+	,removed int default(0)
+	,id_user int null 
 	,constraint pk_id_avaliations primary key (id)
+	,constraint fk_idx_avaliations_users foreign key (id_user) references dbo.users(id)
 )
 go
 
@@ -66,15 +78,7 @@ create table dbo.avaliations_participants(
 )
 go
 
-create table dbo.users (
-	 id int IDENTITY(1,1) NOT NULL
-	,login varchar(100) NOT NULL
-	,password varchar(100) NOT NULL
-	,is_admin bit default(0) NOT NULL
-	,removed bit default(0) NOT NULL
-)
-go
-
+/*
 -- Procedures
 create procedure insertAvaliation
 @Code nvarchar(150),
