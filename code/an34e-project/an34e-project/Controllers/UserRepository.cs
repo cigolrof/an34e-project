@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using an34e_project.Models;
-using BancoAcessaDados.Interface;
-using DataBase;
 
 namespace an34e_project.Controllers
 {
-    public class UserRepository : Context, IRepository<User>
+    public class UserRepository
     {
         public IEnumerable<User> ListAll()
         {

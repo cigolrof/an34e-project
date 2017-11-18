@@ -53,12 +53,6 @@
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataBase\BancoAcessaDados.csproj">
-      <Project>{0b479388-1046-4538-8595-65d909759879}</Project>
-      <Name>BancoAcessaDados</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Busines\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
