@@ -12,7 +12,7 @@ body {
     border-radius: 5px;
 }
 
-.sair {
+.exit {
     color: #696969;
     background-color: #ADD8E6;
     margin-top: 10px;
@@ -20,7 +20,7 @@ body {
     margin-right: 10px;
 }
 
-.superior {
+.upper {
     float: left;
     width: 90%;
     height: 40px;
@@ -42,12 +42,12 @@ body {
 	color: #696969;
 }
 
-.basepesquisa{
-	background-color: white;
-	padding: 20px;
-	height: 100%;
-	margin-right: 5%;
-	margin-left: 5%;
+.basesearch{
+    background-color: white;
+    padding: 20px;
+    height: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .text{
@@ -62,7 +62,7 @@ body {
 
 }
 
-.img{
+.image{
 	width: 20%;
 	height: 20%;
 }
