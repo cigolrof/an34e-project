@@ -1,0 +1,13 @@
+﻿.navbar-header {
+  background-color: #9a8404;
+}
+.navbar-content {
+  background-color: #9a8404;
+  box-shadow: inset -4px 0 0 0 #54abd9;
+}
+.navbar-header:before {
+  background-color: #9a8404;
+}
+#navbar-container {
+  background-color: #9a8404;
+}

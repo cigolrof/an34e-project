@@ -1,0 +1,54 @@
+/* header size */
+#container.mainnav-in .navbar-brand, #container.mainnav-lg .navbar-brand, #container.mainnav-in .brand-title, #container.mainnav-lg .brand-title { width: auto; }
+.navbar-brand { width: auto; height: 50px; font-size: 12px; }
+.navbar-top-links .tgl-menu-btn > a, .navbar-top-links .tgl-menu-btn > a:hover, .navbar-top-links .tgl-menu-btn > a:focus { color: #fff; }
+
+@media (min-width: 768px) {
+	.navbar-header:before { height: 50px; }
+}
+
+.navbar-top-links > li > a { height: 50px; line-height: 50px; }
+#navbar .brand-title { padding-left: 8px; }
+.brand-title { line-height: 15px; }
+.brand-text { font-size: 12px; font-weight: normal; margin-top: 8.5px; padding-left: 8px; }
+.brand-icon { width: auto; height: 36px; margin-left: 40px; margin-top: 7px; }
+.username { line-height: 20px; }
+
+/* left content */
+#mainnav-menu-wrap { margin-top: 0px; padding-top: 0px; }
+
+/* content */
+#mainnav-container { padding-top: 50px; }
+
+@media (min-width: 768px) {
+	#content-container { padding-top: 50px; }
+}
+
+@media (max-width: 767px) {
+	#content-container { padding-top: 100px; }
+}
+
+#container.mainnav-in #content-container { margin-right: 220px; }
+
+/* menu module */
+#navbar { z-index: 10001; }
+	#navbar > #navbar-container > .navbar-header > .navbar-module { width: 220px !important; }
+		#navbar > #navbar-container > .navbar-header > .navbar-module .mega-dropdown { width: 220px !important; }
+			#navbar > #navbar-container > .navbar-header > .navbar-module .mega-dropdown .mega-dropdown-toggle { width: 220px !important; }
+.modal-backdrop { z-index: 10002; }
+.modal { z-index: 10003; }
+
+@media (min-width: 768px) {
+	.navbar-module .dropdown-menu { width: 680px; }
+}
+
+.navbar-module-name { font-weight: bold; }
+.navbar-module .dropdown-menu li a { border-left: 2px solid transparent; transition: background 0.2s linear; }
+.open.mega-dropdown > .mega-dropdown-toggle:before, .open.mega-dropdown > .mega-dropdown-toggle:after { content: normal; }
+.navbar-module ul li { margin: 8px 0px; }
+
+.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*="col-"] { margin-left: -0px !important; }
+
+.mainnav-widget-content { padding: 0px !important; }
+
+#floating-top-right { z-index: 10002 !important; }
