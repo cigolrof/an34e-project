@@ -579,3 +579,4 @@ $RECYCLE.BIN/
 # should be stored in the .pubxml.user file.
 
 # End of https://www.gitignore.io/api/csharp,windows,aspnetcore,visualstudio
+code/an34e-project/an34e-project/Web.config

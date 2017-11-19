@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -164,6 +165,7 @@
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap\js\npm.js" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\floresta.jpg" />
     <Content Include="Content\nifty\css\bootstrap.min.css" />
     <Content Include="Content\nifty\css\nifty.min.css" />
     <Content Include="Content\nifty\css\override.css" />
@@ -381,7 +383,6 @@
     <Content Include="Global.asax" />
     <Content Include="Content\css\Site.css" />
     <Content Include="Content\img\florest.jpg" />
-    <Content Include="Content\img\floresta.jpg" />
     <Content Include="Content\img\fundo.jpg" />
     <Content Include="Content\img\sorriso2.png" />
     <Content Include="Scripts\bootstrap.js" />
