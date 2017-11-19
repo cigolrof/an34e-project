@@ -6,6 +6,7 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html:charset=utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <title> NPS </title>
     <link rel="stylesheet" href="~/Content/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -26,12 +27,12 @@
 </head>
 
 <body>
-    <div class=superior>
-        <button class="sair" onclick="logoff()"> logout</button>
+    <div class=upper>
+        <button class="exit" onclick="logoff()"> logout</button>
     </div>
 
-    <br><br><br><br>
-    <div class="basepesquisa">
+    <br><br>
+    <div class="basesearch">
         <div class="question">Qual a probabilidade de você recomendar nosso serviço para um amigo?</div>
         <button class="button">0</button>
         <button class="button">1</button>
@@ -45,17 +46,17 @@
         <button class="button">9</button>
         <button class="button">10</button>
 
-        <br><br><br><br>
+        <br><br>
         <div class="question">Porque você nos deu nota 6?</div>
-        <input type="text" id="resp" name="resp" value="" placeholder=" " size="80"></input>
+        <input type="text" class="form-control" id="resp" name = "resp" value="" placeholder="">
 
-        <br><br><br><br>
+        <br><br>
         <div class="question">O que você diria ao nos recomendar?</div>
-        <input type="text" id="recomend" name="recomend" value="" placeholder=" " size="80"></input>
+        <input type="text" class="form-control" id="recomend" name="recomend" value="" placeholder="">
 
-        <br><br><br><br>
+        <br><br>
         <div class="question">Que dica você daria para merecermos a nota 10?</div>
-        <input type="text" id="dica" name="dica" value="" placeholder=" " size="80"></input>
+        <input type="text" class="form-control" id="dica" name="dica" value="" placeholder="">
 
     </div>
 
