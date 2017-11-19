@@ -22,7 +22,7 @@ namespace an34e_project.Controllers
 
             if (l == true)
             {
-                return Redirect("/Home/About");
+                return Redirect("/Home/Dashboard");
             }
             else
             {

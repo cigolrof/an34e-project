@@ -13,7 +13,7 @@ namespace an34e_project.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Dashboard()
         {
             ViewBag.Message = "Your application description page.";
 
