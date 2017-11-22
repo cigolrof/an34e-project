@@ -164,8 +164,45 @@
     <Content Include="Content\bootstrap\js\bootstrap.js" />
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap\js\npm.js" />
+    <Content Include="Content\css\animate.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\demo.css" />
+    <Content Include="Content\css\jquery.dataTables.min.css" />
+    <Content Include="Content\css\light-bootstrap-dashboard.css" />
+    <Content Include="Content\css\pe-icon-7-stroke.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="Content\img\default-avatar.png" />
+    <Content Include="Content\img\faces\face-0.jpg" />
+    <Content Include="Content\img\faces\face-1.jpg" />
+    <Content Include="Content\img\faces\face-2.jpg" />
+    <Content Include="Content\img\faces\face-3.jpg" />
+    <Content Include="Content\img\faces\face-4.jpg" />
+    <Content Include="Content\img\faces\face-5.jpg" />
+    <Content Include="Content\img\faces\face-6.jpg" />
+    <Content Include="Content\img\faces\face-7.jpg" />
+    <Content Include="Content\img\faces\tim_vector.jpe" />
+    <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\img\floresta.jpg" />
+    <Content Include="Content\img\loading-bubbles.svg" />
+    <Content Include="Content\img\mask.png" />
+    <Content Include="Content\img\new_logo.png" />
+    <Content Include="Content\img\sidebar-1.jpg" />
+    <Content Include="Content\img\sidebar-2.jpg" />
+    <Content Include="Content\img\sidebar-3.jpg" />
+    <Content Include="Content\img\sidebar-4.jpg" />
+    <Content Include="Content\img\sidebar-5.jpg" />
+    <Content Include="Content\img\tim_80x80.png" />
+    <Content Include="Content\js\bootstrap-checkbox-radio-switch.js" />
+    <Content Include="Content\js\bootstrap-notify.js" />
+    <Content Include="Content\js\bootstrap-select.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\chartist.min.js" />
+    <Content Include="Content\js\demo.js" />
+    <Content Include="Content\js\functions.js" />
+    <Content Include="Content\js\jquery-1.10.2.js" />
+    <Content Include="Content\js\jquery.dataTables.min.js" />
+    <Content Include="Content\js\light-bootstrap-dashboard.js" />
     <Content Include="Content\nifty\css\bootstrap.min.css" />
     <Content Include="Content\nifty\css\nifty.min.css" />
     <Content Include="Content\nifty\css\override.css" />
@@ -379,14 +416,11 @@
     <Content Include="Content\nifty\plugins\x-editable\img\loading.gif" />
     <Content Include="Content\nifty\plugins\x-editable\js\bootstrap-editable.min.js" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\css\Site.css" />
     <Content Include="Content\img\florest.jpg" />
     <Content Include="Content\img\fundo.jpg" />
     <Content Include="Content\img\sorriso2.png" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -469,6 +503,56 @@
     <Content Include="Content\nifty\plugins\themify-icons\fonts\themify.eot" />
     <Content Include="Content\nifty\plugins\themify-icons\fonts\themify.ttf" />
     <Content Include="Content\nifty\plugins\themify-icons\fonts\themify.woff" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="Content\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="Content\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="Content\sass\lbd\mixins\_buttons.scss" />
+    <Content Include="Content\sass\lbd\mixins\_cards.scss" />
+    <Content Include="Content\sass\lbd\mixins\_chartist.scss" />
+    <Content Include="Content\sass\lbd\mixins\_icons.scss" />
+    <Content Include="Content\sass\lbd\mixins\_inputs.scss" />
+    <Content Include="Content\sass\lbd\mixins\_labels.scss" />
+    <Content Include="Content\sass\lbd\mixins\_morphing-buttons.scss" />
+    <Content Include="Content\sass\lbd\mixins\_navbars.scss" />
+    <Content Include="Content\sass\lbd\mixins\_social-buttons.scss" />
+    <Content Include="Content\sass\lbd\mixins\_tabs.scss" />
+    <Content Include="Content\sass\lbd\mixins\_transparency.scss" />
+    <Content Include="Content\sass\lbd\mixins\_vendor-prefixes.scss" />
+    <Content Include="Content\sass\lbd\_alerts.scss" />
+    <Content Include="Content\sass\lbd\_buttons.scss" />
+    <Content Include="Content\sass\lbd\_cards.scss" />
+    <Content Include="Content\sass\lbd\_carousel.scss" />
+    <Content Include="Content\sass\lbd\_chartist.scss" />
+    <Content Include="Content\sass\lbd\_checkbox-radio-switch.scss" />
+    <Content Include="Content\sass\lbd\_collapse.scss" />
+    <Content Include="Content\sass\lbd\_datepicker.scss" />
+    <Content Include="Content\sass\lbd\_dropdown.scss" />
+    <Content Include="Content\sass\lbd\_flexisel.scss" />
+    <Content Include="Content\sass\lbd\_footers.scss" />
+    <Content Include="Content\sass\lbd\_icons.scss" />
+    <Content Include="Content\sass\lbd\_inputs.scss" />
+    <Content Include="Content\sass\lbd\_labels.scss" />
+    <Content Include="Content\sass\lbd\_media.scss" />
+    <Content Include="Content\sass\lbd\_misc.scss" />
+    <Content Include="Content\sass\lbd\_mixins.scss" />
+    <Content Include="Content\sass\lbd\_modal.scss" />
+    <Content Include="Content\sass\lbd\_morphing-buttons.scss" />
+    <Content Include="Content\sass\lbd\_navbars.scss" />
+    <Content Include="Content\sass\lbd\_progress-bars.scss" />
+    <Content Include="Content\sass\lbd\_responsive.scss" />
+    <Content Include="Content\sass\lbd\_sections.scss" />
+    <Content Include="Content\sass\lbd\_sidebar-and-main-panel.scss" />
+    <Content Include="Content\sass\lbd\_sliders.scss" />
+    <Content Include="Content\sass\lbd\_social-buttons.scss" />
+    <Content Include="Content\sass\lbd\_tables.scss" />
+    <Content Include="Content\sass\lbd\_tabs-navs-pagination.scss" />
+    <Content Include="Content\sass\lbd\_tags.scss" />
+    <Content Include="Content\sass\lbd\_tooltips-and-popovers.scss" />
+    <Content Include="Content\sass\lbd\_typography.scss" />
+    <Content Include="Content\sass\lbd\_variables.scss" />
+    <Content Include="Content\sass\light-bootstrap-dashboard.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -491,11 +575,16 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Dashboard.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Area.cshtml" />
+    <Content Include="Views\Home\AvaliableCustomers.cshtml" />
+    <Content Include="Views\Home\Customers.cshtml" />
+    <Content Include="Views\Home\Evaluation.cshtml" />
+    <Content Include="Views\Shared\Layout.cshtml" />
+    <Content Include="Views\Shared\ModalArea.cshtml" />
+    <Content Include="Views\Shared\ModalCustomer.cshtml" />
+    <Content Include="Views\Shared\ModalEvaluation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -507,19 +596,7 @@
     <Folder Include="Views\Users\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BancoDominio\BancoDominio.csproj">
@@ -530,6 +607,9 @@
       <Project>{0b479388-1046-4538-8595-65d909759879}</Project>
       <Name>BancoAcessaDados</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

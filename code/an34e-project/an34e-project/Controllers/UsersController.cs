@@ -22,11 +22,11 @@ namespace an34e_project.Controllers
 
             if (l == true)
             {
-                return Redirect("/Home/Dashboard");
+                return Redirect("/Home/Index");
             }
             else
             {
-                return Redirect("/Home/Index");
+                return Redirect("/Home/Login");
             }
         }
 

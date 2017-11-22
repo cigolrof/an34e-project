@@ -1,39 +1,136 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
 }
-<!DOCTYPE HTML>
-<html>
 
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="content-type" content="text/html:charset=utf-8">
-    <title> NPS </title>
-    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/css/style.css">
+    <title>Dashboard</title>
 </head>
 
-
 <body>
-    <div class="base">
-        <center>
-            <img style="width:40%; height:40% " src="~/Content/img/sorriso2.png" />
-
-            <div class="form">
-                <div class="text">NPS</div>
-                <form action="/Users/Login" method="post" charset="utf-8">
-                    <div class="form-group">
-                        <br />
-                        <input type="email" id="email" name="email" value="" placeholder="E-mail" class="form-control" />
-                        <input type="password" id="password" name="password" class="form-control" value="" placeholder="Senha" required charset="utf-8"/>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">NPS Atual da Empresa</h4>
+                            <p class="category">Relativo ao Mês de ...</p>
+                        </div>
+                        <div class="content">
+                            <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+                            <div class="footer">
+                                <div class="legend">
+                                    <i class="fa fa-circle text-success"></i> Promotores
+                                    <i class="fa fa-circle text-danger"></i> Detratores
+                                    <i class="fa fa-circle text-warning"></i> Neutros
+                                </div>
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        <input type="submit"  style="width:80%;background-color: #696969; color: white;outline: none;" value="Entrar" placeholder="" class="btn" charset="utf-8" />
-                </form>
+                </div>
+                <div class="col-md-8">
+                    <div class="card ">
+                        <div class="header">
+                            <h4 class="title">Evolução da NPS da Empresa</h4>
+                            <p class="category">All products including Taxes</p>
+                        </div>
+                        <div class="content">
+                            <div id="chartActivity" class="ct-chart"></div>
+                            <div class="footer">
+                                <div class="legend">
+                                    <i class="fa fa-circle text-info"></i> 
+                                    <i class="fa fa-circle text-danger"></i> 
+                                </div>
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-check"></i> Data information certified
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Qualiex</h4>
+                            <p class="category">Média das avaliações</p>
+                        </div>
+                        <div class="content">
+                            <div id="chartHours" class="ct-chart"></div>
+                            <div class="footer">
+                                <div class="legend">
+                                    <i class="fa fa-circle text-success"></i> Promotores
+                                    <i class="fa fa-circle text-danger"></i> Detratores
+                                    <i class="fa fa-circle text-warning"></i> Neutros
+                                </div>
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-history"></i> Atualizado em 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Metrologia</h4>
+                            <p class="category">Média das avaliações</p>
+                        </div>
+                        <div class="content">
+                            <div id="chartHours" class="ct-chart"></div>
+                            <div class="footer">
+                                <div class="legend">
+                                    <i class="fa fa-circle text-success"></i> Promotores
+                                    <i class="fa fa-circle text-danger"></i> Detratores
+                                    <i class="fa fa-circle text-warning"></i> Neutros
+                                </div>
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-history"></i> Atualizado em 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Projetos Especiais</h4>
+                            <p class="category">Média das avaliações</p>
+                        </div>
+                        <div class="content">
+                            <div id="chartHours" class="ct-chart"></div>
+                            <div class="footer">
+                                <div class="legend">
+                                    <i class="fa fa-circle text-success"></i> Promotores
+                                    <i class="fa fa-circle text-danger"></i> Detratores
+                                    <i class="fa fa-circle text-warning"></i> Neutros
+                                </div>
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-history"></i> Atualizado em 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
             </div>
 
-        </center>
-
+            
+        </div>
     </div>
 
 </body>
