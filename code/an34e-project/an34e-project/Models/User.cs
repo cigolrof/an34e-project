@@ -11,12 +11,11 @@ using System.Configuration;
 
 namespace an34e_project.Models
 {
-    public class User : Controller
+    public class User : BaseClass
     {
-        public int id { get; set; }
-        public string login { get; set; }
-        public string password { get; set; }
-        public int removed { get; set; }
+        public int Id { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
 
         //public static String getHashSha256(String text)
         //{
@@ -46,10 +45,10 @@ namespace an34e_project.Models
             while (dt.Read())
             {
                 var obj = new User();
-                obj.login = dt.GetString(0);
-                obj.password = dt.GetString(1);
+                obj.Login = dt.GetString(0);
+                obj.Password = dt.GetString(1);
 
-                if ((loginC == obj.login) && (senhaC == obj.password))
+                if ((loginC == obj.Login) && (senhaC == obj.Password))
                 {
                     return true;
                 }

@@ -5,10 +5,10 @@ using System.Web;
 
 namespace an34e_project.Models {
     public class Question {
-        public Int32 Id { get; set; }
-        public String Quest { get; set; }
-        public Int32 Level { get; set; }
-        public Int32 RequiredLevel { get; set; }
-        public Boolean Removed { get; set; }
+        public int id { get; set; }
+        public string question { get; set; }
+        public int level { get; set; }
+        public int level_required { get; set; }
+        public int removed { get; set; }
     }
 }

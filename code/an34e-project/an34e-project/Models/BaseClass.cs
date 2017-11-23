@@ -1,4 +1,4 @@
-﻿namespace ProjetoNPS.Models
+﻿namespace an34e_project.Models
 {
     public class BaseClass
     {

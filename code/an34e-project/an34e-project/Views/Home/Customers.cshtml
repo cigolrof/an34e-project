@@ -1,5 +1,5 @@
-﻿@using ProjetoNPS.Models
-@model List<ProjetoNPS.Models.Customer>
+﻿@using an34e_project.Models
+@model List<an34e_project.Models.Customer>
 
 @{
     ViewBag.CustomerActive = "active";
@@ -9,26 +9,6 @@
 
 <div class="content">
     <div class="container-fluid">
-
-
-        <ul>
-            <li class="btn-group">
-                <button type="button" href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                    Selecione a Área
-                    <b class="caret"></b>
-
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="/Home/Customers?IdArea=-1">Todas as áreas</a></li>
-                    <li role="separator" class="divider"></li>
-                    @foreach (var item in ViewBag.Areas)
-                    {
-                        <li><a href="/Home/Customers?IdArea=@item.Id">@item.Title</a></li>
-                    }
-
-                </ul>
-            </li>
-        </ul>
         <div class="col-md-7">
             <div class="container-fluid">
                 <div class="card">
@@ -38,9 +18,6 @@
                         <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#modalCustomer" style="margin-bottom:20px;" onclick="showModal()">
                             Adicionar Novo Cliente
                         </button>
-
-
-
                     </div>
                     <div class="content table-responsive table-full-width">
                         <table id="tableCustomers" class="table table-hover table-striped">
@@ -59,10 +36,8 @@
 
                                     <tr onclick="ShowCustomer(@customers.Id)">
 
-                                        <td>@customers.Title</td>
-                                        <td>@customers.Phone</td>
-                                        <td>@customers.Responsible</td>
-                                        <td>@customers.Score</td>
+                                        <td>@customers.Name</td>
+                                        
 
                                     </tr>
 
@@ -73,9 +48,6 @@
                 </div>
                 </div>
             </div>
-            
-
-
         <div class="content">
             <div class="container-fluid">
                 <div class="row">

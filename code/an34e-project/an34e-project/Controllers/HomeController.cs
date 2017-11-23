@@ -1,4 +1,5 @@
-﻿using System;
+﻿using an34e_project.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,6 +24,24 @@ namespace an34e_project.Controllers
         public ActionResult Login()
         {
             return View();
+        }
+
+        public ActionResult Customers()
+        {
+            List<Customer> c = new List<Customer>();
+            c.Add(new Customer()
+            {
+                CustomerSince = new DateTime(),
+                Id = 1,
+                LastAvaliation = new DateTime(),
+                Name = "sadadsd",
+                NpsStatus = 1,
+                Removed = 0,
+                Responsible = null
+            });
+            
+
+            return View(c);
         }
     }
 }
