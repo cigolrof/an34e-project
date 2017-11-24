@@ -586,7 +586,7 @@
     <Content Include="Views\Home\Area.cshtml" />
     <Content Include="Views\Home\AvaliableCustomers.cshtml" />
     <Content Include="Views\Home\Customers.cshtml" />
-    <Content Include="Views\Home\Evaluation.cshtml" />
+    <Content Include="Views\Home\Avaliation.cshtml" />
     <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\Shared\ModalArea.cshtml" />
     <Content Include="Views\Shared\ModalCustomer.cshtml" />

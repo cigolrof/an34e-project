@@ -1,7 +1,7 @@
 ﻿@using an34e_project.Models
-@model List<an34e_project.Models.Evaluation>
+@model List<an34e_project.Models.Avaliation>
 @{
-    ViewBag.EvaluationActive = "active";
+    ViewBag.AvaliationActive = "active";
     ViewBag.Title = "Avaliações";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
@@ -12,7 +12,7 @@
         @*<div class="text-center">
             <a href="#"> <i class="pe-7s-angle-left-circle"></i></a>  <h4>Mês de Ano</h4> <a href="#"><i class="pe-7s-angle-right-circle"></i></a>
         </div>*@
-        @foreach (var item in ViewBag.Areas)
+        @*@foreach (var item in ViewBag.Areas)
         {
             <div class="card container col-md-10 col-md-offset-1">
                 <h4>@item.Title</h4>
@@ -29,7 +29,7 @@
                         <th>Referencia</th>
                         <th>Opções</th>
 
-                        <tbody>
+                        @*<tbody>
                             @foreach (var evaluation in Model)
                             {
 
@@ -56,8 +56,8 @@
 
                 </div>
             </div>
-            @*<li><a href="/Home/Customers?IdArea=@item.Id">@item.Title</a></li>*@
-        }
+            @*<li><a href="/Home/Customers?IdArea=@item.Id">@item.Title</a></li>
+        }*@
 
 
     </div>

@@ -37,5 +37,10 @@ namespace an34e_project.Controllers
             var obj = new Question().ListQuestions();
             return View(obj);
         }
+
+        public ActionResult Avaliation()
+        {
+            return View();
+        }
     }
 }
