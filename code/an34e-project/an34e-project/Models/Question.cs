@@ -21,9 +21,9 @@ namespace an34e_project.Models {
             var cmd = new SqlCommand();
             cmd = new SqlCommand("insert into questions (level, level_required, question) values (@level, @level_required, @question)", connection);
 
-            cmd.Parameters.Add(new SqlParameter("@level", Quest) { DbType = DbType.String });
-            cmd.Parameters.Add(new SqlParameter("@level_required", Level) { DbType = DbType.Int32 });
-            cmd.Parameters.Add(new SqlParameter("@question", RequiredLevel) { DbType = DbType.Int32 });
+            cmd.Parameters.Add(new SqlParameter("@level", Level) { DbType = DbType.Int32 });
+            cmd.Parameters.Add(new SqlParameter("@level_required", RequiredLevel) { DbType = DbType.Int32 });
+            cmd.Parameters.Add(new SqlParameter("@question", Quest) { DbType = DbType.String });
             var rows = cmd.ExecuteNonQuery();
 
             connection.Close();
@@ -68,7 +68,7 @@ namespace an34e_project.Models {
             var connection = new SqlConnection(Db);
             connection.Open();
 
-            var cmd = new SqlCommand("select t.id, t.level, t.level_required, t.quest, t.removed from contacts t where t.removido = 0", connection);
+            var cmd = new SqlCommand("select t.id, t.level, t.level_required, t.question, t.removed from questions t where t.removed = 0", connection);
 
             SqlDataReader dt = cmd.ExecuteReader();
             var lst = new List<Question>();

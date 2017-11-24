@@ -2,8 +2,10 @@
 $(document).ready(function () {
     $('#tableCustomers').DataTable();
     $('#tableEvaluations').DataTable();
+    $('#tableQuestion').DataTable();
     $('#divShowCustomer').hide();
     $('#divShowArea').hide();
+    $('#divShowQuestion').hide();
     //$('#saveEvaluation').click(function () {
         
     //});
@@ -238,5 +240,116 @@ demo = {
     }
 }
 
+var currentQuestion = 0;
+function ShowQuestion(IdQuestion) {
+    $.ajax({
+        url: '/Question/Edit',
+        type: 'POST',
+        data: { Id: IdQuestion, },
+        error: function () {
+            alert("Não foi possível realizar a operação!");
+
+        },
+        success: function (question) {
 
 
+            $('#divShowQuestion').show();//exibe div com botoes
+
+            var obj = JSON.parse(question);
+            currentQuestion = obj.Id;
+            $('#PerguntaShow').val(obj.Quest);
+            $('#NivelShow').val(obj.Level);
+            $('#NivelNecessarioShow').val(obj.RequiredLevel);
+
+        }
+    });
+}
+
+function editQuestion() {
+
+    $.ajax({
+        url: '/Question/SelectById?id=' + currentQuestion,
+        type: 'GET',
+        //data: { Id: IdCustomer },
+        error: function () {
+            alert("Não foi possível realizar a operação!");
+
+        },
+        success: function (customer) {
+
+
+            $("#modalCustomer").modal(); //abre a modal
+
+            var obj = JSON.parse(customer);
+            $('#id').val(obj.Id);
+            $('#title').val(obj.Title);
+            $('#responsible').val(obj.Responsible);
+            $('#email').val(obj.Email);
+            $('#phone').val(obj.Phone);
+            //$('#since').val(obj.Since);
+            $('#area').val(obj.Area.Title);
+
+        }
+    });
+}
+
+function btnAddQuestion() {
+    //alert($("#idArea").val());
+    $.ajax({
+        url: '/Question/Insert',
+        type: 'POST',
+        data: {
+            Quest: $("#question").val(),
+            Level: $("#level").val(),
+            RequiredLevel: $("#required_lever").val(),
+
+        },
+        //error: function () {
+        //    alert("Não foi possível realizar a operação!\nHouve um problema no envio da sua requisição!");
+
+        //},
+        success: function (data) {
+
+            if (data.HasEvaluation == true) {
+                alert("Pergunta não foi registrada!");
+                return;
+
+            }
+            if (data.Save == false) {
+                alert("Houve um problema ao registrar a Pergunta!");
+            }
+            else if (data.Save == true) {
+                alert("Pergunta cadastrada com sucesso!");
+                //window.location.replace("/Home/Evaluation");
+            }
+
+        }
+    });
+
+    //$.ajax({
+    //    url: '/Evaluation/SaveEvaluation',
+    //    type: 'POST',
+    //    data: {
+    //        id: idArea,
+    //        month: $("#month").val(),
+    //        year: $("#year").val(),
+
+    //    },
+    //    error: function () {
+    //        alert("Não foi possível realizar a operação!\nHouve um problema no envio da sua requisição!");
+
+    //    },
+    //    success: function (data) {
+    //        if (data.success == true) {
+    //            alert("Avaliação cadastrada com sucesso")
+    //            // $.post("/Home/Customers", { IdArea: 2 }, function (data) { $("#modalCustomer").modal("hide"); });
+    //            window.location.replace("/Home/Evaluation");
+    //        }
+    //        else {
+    //            alert("Houve um problema ao registrar a Avaliação!");
+    //        }
+
+    //    }
+    //});
+    //});
+}

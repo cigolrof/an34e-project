@@ -591,6 +591,8 @@
     <Content Include="Views\Shared\ModalArea.cshtml" />
     <Content Include="Views\Shared\ModalCustomer.cshtml" />
     <Content Include="Views\Shared\ModalEvaluation.cshtml" />
+    <Content Include="Views\Home\Question.cshtml" />
+    <Content Include="Views\Shared\ModalQuestion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
