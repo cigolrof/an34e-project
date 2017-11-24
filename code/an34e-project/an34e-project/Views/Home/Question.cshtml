@@ -30,7 +30,8 @@
                             </thead>
 
                             <tbody>
-                                @foreach (var questions in Model) {
+                                @foreach (var questions in Model)
+                                {
 
                                     <tr onclick="ShowQuestion(@questions.Id)">
 
@@ -75,7 +76,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label >Nível Necessário</label>
+                                                <label>Nível Necessário</label>
                                                 <input type="number" class="form-control" id="NivelNecessarioShow" name="emailShow" disabled>
                                             </div>
                                         </div>
