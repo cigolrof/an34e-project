@@ -24,7 +24,6 @@
                             <thead>
                                 <tr>
                                     <th>Nome</th>
-                                    <th>Telefone</th>
                                     <th>Responsável</th>
                                     <th>Última Avaliação</th>
                                 </tr>
@@ -37,7 +36,9 @@
                                     <tr onclick="ShowCustomer(@customers.Id)">
 
                                         <td>@customers.Name</td>
-                                        
+                                        <td>@customers.Responsible</td>
+                                        <td>@customers.CustomerSince</td>
+
 
                                     </tr>
 

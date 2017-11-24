@@ -40,10 +40,7 @@ create table dbo.customers(
 	 id int IDENTITY(1,1) NOT NULL
 	,name nvarchar(150) NOT NULL
 	,responsible nvarchar(150) NOT NULL
-	,area int NOT NULL
-	,nps_status int NOT NULL	
 	,customer_since date NOT NULL
-	,last_avaliation date
 	,removed int NOT NULL default(0)
 	,constraint pk_id_customers primary key (id)
 )

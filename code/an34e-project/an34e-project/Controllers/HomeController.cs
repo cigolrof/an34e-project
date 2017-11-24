@@ -32,12 +32,8 @@ namespace an34e_project.Controllers
             c.Add(new Customer()
             {
                 CustomerSince = new DateTime(),
-                Id = 1,
-                LastAvaliation = new DateTime(),
                 Name = "sadadsd",
-                NpsStatus = 1,
-                Removed = 0,
-                Responsible = null
+                Responsible = "xxxxxxxxx"
             });
             
 

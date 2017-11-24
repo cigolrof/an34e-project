@@ -1,19 +1,11 @@
 ﻿
 $(document).ready(function () {
-    $('#tableCustomers').DataTable();
-    $('#tableEvaluations').DataTable();
+    $('#tableCustomers')/*.DataTable()*/;
+    $('#tableEvaluations')/*.DataTable()*/;
     $('#divShowCustomer').hide();
     $('#divShowArea').hide();
-    //$('#saveEvaluation').click(function () {
-        
-    //});
-    //$('#addEvaluation').click(function () {
-    //    var id = $(this).data('areaId');
-        
-    //});
 
     $('#btnAdd').click(function () {
-
         if (validate() == false)
             return;
         $.ajax({
@@ -22,11 +14,7 @@ $(document).ready(function () {
             data: {
                 id: $("#id").val(),
                 title: $("#title").val(),
-                responsible: $("#responsible").val(),
-                email: $("#email").val(),
-                phone: $("#phone").val(),
-                area: $("#area").val(),
-
+                responsible: $("#responsible").val()
             },
             error: function () {
                 alert("Não foi possível realizar a operação!\nHouve um problema no envio da sua requisição!");
