@@ -16,12 +16,10 @@ namespace an34e_project.Controllers {
 
             return View("Conteudo", lst);
         }
-        public ActionResult Insert(String Quest, Int32 Level, Int32 RequiredLevel) {
         public ContentResult Insert(String Quest, Int32 Level, Int32 RequiredLevel) {
 
             var user = new Question().Insert(Quest, Level, RequiredLevel);
 
-            return Index();
             return Content("{success:"+ user +"}");
         }
         public ActionResult Remove(int id) {

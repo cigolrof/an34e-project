@@ -21,9 +21,6 @@ namespace an34e_project.Models {
             var cmd = new SqlCommand();
             cmd = new SqlCommand("insert into questions (level, level_required, question) values (@level, @level_required, @question)", connection);
 
-            cmd.Parameters.Add(new SqlParameter("@level", Quest) { DbType = DbType.String });
-            cmd.Parameters.Add(new SqlParameter("@level_required", Level) { DbType = DbType.Int32 });
-            cmd.Parameters.Add(new SqlParameter("@question", RequiredLevel) { DbType = DbType.Int32 });
             cmd.Parameters.Add(new SqlParameter("@level", Level) { DbType = DbType.Int32 });
             cmd.Parameters.Add(new SqlParameter("@level_required", RequiredLevel) { DbType = DbType.Int32 });
             cmd.Parameters.Add(new SqlParameter("@question", Quest) { DbType = DbType.String });
