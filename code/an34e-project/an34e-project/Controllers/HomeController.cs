@@ -28,16 +28,8 @@ namespace an34e_project.Controllers
 
         public ActionResult Customers()
         {
-            List<Customer> c = new List<Customer>();
-            c.Add(new Customer()
-            {
-                CustomerSince = new DateTime(),
-                Name = "sadadsd",
-                Responsible = "xxxxxxxxx"
-            });
-            
-
-            return View(c);
+            var obj = new Customer().ListCustomer();
+            return View(obj);
         }
 
         public ActionResult Question()

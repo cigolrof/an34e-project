@@ -2,8 +2,10 @@
 $(document).ready(function () {
     $('#tableCustomers')/*.DataTable()*/;
     $('#tableEvaluations')/*.DataTable()*/;
+    $('#tableQuestion')/*.DataTable()*/;
     $('#divShowCustomer').hide();
     $('#divShowArea').hide();
+    $('#divShowQuestion').hide();
 
     $('#btnAdd').click(function () {
         if (validate() == false)
@@ -13,7 +15,7 @@ $(document).ready(function () {
             type: 'POST',
             data: {
                 id: $("#id").val(),
-                title: $("#title").val(),
+                name: $("#name").val(),
                 responsible: $("#responsible").val()
             },
             error: function () {
@@ -23,7 +25,6 @@ $(document).ready(function () {
             success: function (data) {
                 if (data.success == true) {
                     alert("Cliente cadastrado com sucesso")
-                    // $.post("/Home/Customers", { IdArea: 2 }, function (data) { $("#modalCustomer").modal("hide"); });
                     window.location.replace("/Home/Customers?IdArea=-1");
                 }
                 else {
@@ -72,31 +73,31 @@ function btnAddEvaluation() {
         }
     });
 
-        //$.ajax({
-        //    url: '/Evaluation/SaveEvaluation',
-        //    type: 'POST',
-        //    data: {
-        //        id: idArea,
-        //        month: $("#month").val(),
-        //        year: $("#year").val(),
+    //$.ajax({
+    //    url: '/Evaluation/SaveEvaluation',
+    //    type: 'POST',
+    //    data: {
+    //        id: idArea,
+    //        month: $("#month").val(),
+    //        year: $("#year").val(),
 
-        //    },
-        //    error: function () {
-        //        alert("Não foi possível realizar a operação!\nHouve um problema no envio da sua requisição!");
+    //    },
+    //    error: function () {
+    //        alert("Não foi possível realizar a operação!\nHouve um problema no envio da sua requisição!");
 
-        //    },
-        //    success: function (data) {
-        //        if (data.success == true) {
-        //            alert("Avaliação cadastrada com sucesso")
-        //            // $.post("/Home/Customers", { IdArea: 2 }, function (data) { $("#modalCustomer").modal("hide"); });
-        //            window.location.replace("/Home/Evaluation");
-        //        }
-        //        else {
-        //            alert("Houve um problema ao registrar a Avaliação!");
-        //        }
+    //    },
+    //    success: function (data) {
+    //        if (data.success == true) {
+    //            alert("Avaliação cadastrada com sucesso")
+    //            // $.post("/Home/Customers", { IdArea: 2 }, function (data) { $("#modalCustomer").modal("hide"); });
+    //            window.location.replace("/Home/Evaluation");
+    //        }
+    //        else {
+    //            alert("Houve um problema ao registrar a Avaliação!");
+    //        }
 
-        //    }
-        //});
+    //    }
+    //});
     //});
 }
 
@@ -290,24 +291,16 @@ function btnAddQuestion() {
             RequiredLevel: $("#required_lever").val(),
 
         },
-        //error: function () {
-        //    alert("Não foi possível realizar a operação!\nHouve um problema no envio da sua requisição!");
+        error: function () {
+            alert("Não foi possível realizar a operação!\nHouve um problema no envio da sua requisição!");
 
-        //},
+        },
         success: function (data) {
-
-            if (data.HasEvaluation == true) {
-                alert("Pergunta não foi registrada!");
-                return;
-
-            }
-            if (data.Save == false) {
-                alert("Houve um problema ao registrar a Pergunta!");
-            }
-            else if (data.Save == true) {
+            if (data == "{success:True}") {
                 alert("Pergunta cadastrada com sucesso!");
-                //window.location.replace("/Home/Evaluation");
-            }
+                window.location.replace("/Home/Question");
+            } else
+                alert("Deu Ruim!");
 
         }
     });
