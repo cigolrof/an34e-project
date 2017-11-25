@@ -238,8 +238,6 @@ function ShowQuestion(IdQuestion) {
 
         },
         success: function (question) {
-
-
             $('#divShowQuestion').show();//exibe div com botoes
 
             var obj = JSON.parse(question);
@@ -247,7 +245,6 @@ function ShowQuestion(IdQuestion) {
             $('#PerguntaShow').val(obj.Quest);
             $('#NivelShow').val(obj.Level);
             $('#NivelNecessarioShow').val(obj.RequiredLevel);
-
         }
     });
 }
@@ -332,6 +329,27 @@ function btnAddQuestion() {
     //});
     //});
 }
+function deleteQuestion() {
+    alert("Tem certeza que deseja remover essa Pergunta?")
+    $.ajax({
+        url: '/Question/Remove?id=' + currentQuestion,
+        type: 'POST',
+        //data: { Id: IdCustomer },
+        error: function () {
+            alert("Não foi possível realizar a operação!");
+
+        },
+        success: function (data) {
+            if (data.success) {
+                alert("Pergunta removida com sucesso.");
+                window.location.replace("/Home/Question");
+            } else {
+                alert("Houve um problema ao excluir a Pergunta!");
+            }
+        }
+    });
+}
+
 function btnLogoff() {
     $.ajax({
         url: '/User/Logoff',

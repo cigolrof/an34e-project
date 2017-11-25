@@ -32,16 +32,11 @@
                             <tbody>
                                 @foreach (var questions in Model)
                                 {
-
                                     <tr onclick="ShowQuestion(@questions.Id)">
-
                                         <td>@questions.Quest</td>
                                         <td>@questions.Level</td>
                                         <td>@questions.RequiredLevel</td>
-
-
                                     </tr>
-
                                 }
                             </tbody>
                         </table>
@@ -63,7 +58,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Pergunta</label>
-                                                <input type="text" class="form-control" id="PerguntaShow" name="titleShow" disabled>
+                                                <input type="text" class="form-control" id="PerguntaShow" name="PerguntaShow" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -71,21 +66,21 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Nível</label>
-                                                <input type="number" class="form-control" id="NivelShow" name="responsibleShow" disabled>
+                                                <input type="number" class="form-control" id="NivelShow" name="NivelShow" disabled>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Nível Necessário</label>
-                                                <input type="number" class="form-control" id="NivelNecessarioShow" name="emailShow" disabled>
+                                                <input type="number" class="form-control" id="NivelNecessarioShow" name="NivelNecessarioShow" disabled>
                                             </div>
                                         </div>
                                     </div>
 
                                 </form>
                                 <div id="divShowQuestion" name="divShowQuestion">
-                                    <button id="updateCustomer" name="updateCustomer" class="btn" onclick="editQuestion()">Editar</button>
-                                    <button id="deleteCustomer" name="deleteCustomer" class="btn btn-danger" onclick="deleteCustomer()">Excluir</button>
+                                    <button id="updateQuestion" name="updateQuestion" class="btn" onclick="editQuestion()">Editar</button>
+                                    <button id="deleteQuestion" name="deleteQuestion" class="btn btn-danger" onclick="deleteQuestion()">Excluir</button>
                                 </div>
                             </div>
                         </div>
