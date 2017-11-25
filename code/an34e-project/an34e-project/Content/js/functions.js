@@ -230,7 +230,7 @@ demo = {
 var currentQuestion = 0;
 function ShowQuestion(IdQuestion) {
     $.ajax({
-        url: '/Question/Edit',
+        url: '/Question/Load',
         type: 'POST',
         data: { Id: IdQuestion, },
         error: function () {
@@ -331,4 +331,11 @@ function btnAddQuestion() {
     //    }
     //});
     //});
+}
+function btnLogoff() {
+    $.ajax({
+        url: '/User/Logoff',
+        type: 'POST',
+        success: function (data) { }
+    });
 }

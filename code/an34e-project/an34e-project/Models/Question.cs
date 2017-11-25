@@ -90,7 +90,7 @@ namespace an34e_project.Models {
             var connection = new SqlConnection(Db);
             connection.Open();
 
-            var cmd = new SqlCommand("select t.id, t.level, t.level_required, t.quest, t.removed from contacts t where t.removido = 0 and id = @id", connection);
+            var cmd = new SqlCommand("select t.id, t.level, t.level_required, t.question, t.removed from questions t where t.removed = 0 and id = @id", connection);
             cmd.Parameters.Add(new SqlParameter("@id", id) { DbType = DbType.Int32 });
 
             SqlDataReader dt = cmd.ExecuteReader();
