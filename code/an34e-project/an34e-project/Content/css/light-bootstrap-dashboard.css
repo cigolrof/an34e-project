@@ -453,7 +453,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 }
 
 .main-panel {
-  background: rgba(203, 203, 210, 0.15);
+  background: #c9d8e8; /*rgba(203, 203, 210, 0.15); Cor do Fundo*/
   position: relative;
   z-index: 2;
   float: right;
@@ -1370,6 +1370,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   border-radius: 0;
 }
 .navbar .navbar-brand {
+  color: #fff;
   font-weight: 400;
   margin: 5px 0px;
   padding: 15px 15px;
@@ -1513,7 +1514,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 }
 
 .navbar-default {
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: #2562ad; /*rgba(255, 255, 255, 0.96); Cor do Cabeçalho*/
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .navbar-default .navbar-nav > li > a:not(.btn) {
