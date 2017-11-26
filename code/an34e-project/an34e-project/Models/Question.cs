@@ -35,14 +35,14 @@ namespace an34e_project.Models {
             var connection = new SqlConnection(Db);
             connection.Open();
 
-            var cmd = new SqlCommand("update questions set level = @level, level_required = @level_required, quest = @question where id = @id", connection);
+            var cmd = new SqlCommand("update questions set level = @level, level_required = @level_required, question = @question where id = @id", connection);
             var lst = new List<Question>();
 
             var obj = new Question();
             cmd.Parameters.Add(new SqlParameter("@id", Id) { DbType = DbType.Int32 });
-            cmd.Parameters.Add(new SqlParameter("@level", Quest) { DbType = DbType.String });
+            cmd.Parameters.Add(new SqlParameter("@question", Quest) { DbType = DbType.String });
             cmd.Parameters.Add(new SqlParameter("@level_required", Level) { DbType = DbType.Int32 });
-            cmd.Parameters.Add(new SqlParameter("@question", RequiredLevel) { DbType = DbType.Int32 });
+            cmd.Parameters.Add(new SqlParameter("@level", RequiredLevel) { DbType = DbType.Int32 });
             var rows = cmd.ExecuteNonQuery();
 
             connection.Close();

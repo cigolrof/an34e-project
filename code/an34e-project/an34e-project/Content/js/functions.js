@@ -251,9 +251,9 @@ function editQuestion() {
         type: 'POST',
         data: {
             Id: currentQuestion,
-            Quest: $("#question").val(),
-            Level: $("#level").val(),
-            RequiredLevel: $("#required_lever").val()
+            Quest: $("#PerguntaShow").val(),
+            Level: $("#NivelShow").val(),
+            RequiredLevel: $("#NivelNecessarioShow").val()
         },
         error: function () {
             alert("Não foi possível realizar a operação!\nHouve um problema no envio da sua requisição!");
