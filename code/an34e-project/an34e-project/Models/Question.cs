@@ -29,13 +29,13 @@ namespace an34e_project.Models {
             connection.Close();
             return (rows > 0);
         }
-        public List<Question> Update(Int32 Id, String Quest, Int32 Level, Int32 RequiredLevel, Boolean Removed) {
+        public bool Update(Int32 Id, String Quest, Int32 Level, Int32 RequiredLevel) {
 
             var Db = ConfigurationManager.ConnectionStrings["db"].ConnectionString.ToString();
             var connection = new SqlConnection(Db);
             connection.Open();
 
-            var cmd = new SqlCommand("update questions set level = @level, level_required = @level_required, quest = @question, removed = @removed where id = @id", connection);
+            var cmd = new SqlCommand("update questions set level = @level, level_required = @level_required, quest = @question where id = @id", connection);
             var lst = new List<Question>();
 
             var obj = new Question();
@@ -43,11 +43,10 @@ namespace an34e_project.Models {
             cmd.Parameters.Add(new SqlParameter("@level", Quest) { DbType = DbType.String });
             cmd.Parameters.Add(new SqlParameter("@level_required", Level) { DbType = DbType.Int32 });
             cmd.Parameters.Add(new SqlParameter("@question", RequiredLevel) { DbType = DbType.Int32 });
-            cmd.Parameters.Add(new SqlParameter("@removed", Removed) { DbType = DbType.Boolean });
             var rows = cmd.ExecuteNonQuery();
 
             connection.Close();
-            return lst;
+            return (rows > 0);
         }
         public bool Remove(Int32 Id) {
 

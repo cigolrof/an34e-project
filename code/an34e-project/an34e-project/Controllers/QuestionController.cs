@@ -22,12 +22,11 @@ namespace an34e_project.Controllers {
 
             return Content("{success:"+ user +"}");
         }
-        public ActionResult Remove(int id) {
+        public ContentResult Remove(int id) {
 
             Question user = new Question();
-            user.Remove(id);
-
-            return Index();
+            
+            return Content("{success:" + user.Remove(id) + "}");
         }
         public ContentResult Load(int id) {
 
@@ -36,11 +35,11 @@ namespace an34e_project.Controllers {
 
             return Content(serializer.Serialize(question).ToString());
         }
-        public ActionResult Edit(Int32 Id, String Quest, Int32 Level, Int32 RequiredLevel, Boolean Removed) {
+        public ContentResult Edit(Int32 Id, String Quest, Int32 Level, Int32 RequiredLevel) {
 
-            var user = new Question().Update(Id, Quest, Level, RequiredLevel, Removed);
-
-            return Index();
+            var user = new Question().Update(Id, Quest, Level, RequiredLevel);
+            
+            return Content("{success:" + user + "}");
         }
     }
 }
