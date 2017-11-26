@@ -101,8 +101,6 @@ function btnAddEvaluation() {
     //});
 }
 
-
-
 function validate() {
 
     if ($("#title").val() == "" || $("#title").val() == "" || $("#responsible").val() == ""
@@ -116,6 +114,7 @@ function validate() {
 }
 
 var currentCustomer = 0;
+
 function ShowCustomer(IdCustomer) {
     $.ajax({
         url: '/Customer/GetCustomerEdit',
@@ -142,8 +141,6 @@ function ShowCustomer(IdCustomer) {
         }
     });
 }
-
-
 
 function editCustomer() {
 
@@ -228,6 +225,7 @@ demo = {
 }
 
 var currentQuestion = 0;
+
 function ShowQuestion(IdQuestion) {
     $.ajax({
         url: '/Question/Load',
@@ -253,7 +251,6 @@ function ShowQuestion(IdQuestion) {
 }
 
 function editQuestion() {
-
     $.ajax({
         url: '/Question/Edit',
         type: 'POST',
@@ -300,24 +297,29 @@ function btnAddQuestion() {
         }
     });
 }
-function deleteQuestion() {
-    alert("Tem certeza que deseja remover essa Pergunta?")
-    $.ajax({
-        url: '/Question/Remove?id=' + currentQuestion,
-        type: 'POST',
-        error: function () {
-            alert("Não foi possível realizar a operação!");
 
-        },
-        success: function (data) {
-            if (data) {
-                alert("Pergunta removida com sucesso.");
-                window.location.replace("/Home/Question");
-            } else {
-                alert("Houve um problema ao excluir a Pergunta!");
+function deleteQuestion() {
+    ret = confirm("Tem certeza que deseja remover essa Pergunta?");
+    if (ret == true) {
+        $.ajax({
+            url: '/Question/Remove?id=' + currentQuestion,
+            type: 'POST',
+            error: function () {
+                alert("Não foi possível realizar a operação!");
+
+            },
+            success: function (data) {
+                if (data) {
+                    alert("Pergunta removida com sucesso.");
+                    window.location.replace("/Home/Question");
+                } else {
+                    alert("Houve um problema ao excluir a Pergunta!");
+                }
             }
-        }
-    });
+        });
+    }
+    else { }
+    
 }
 
 function btnLogoff() {
