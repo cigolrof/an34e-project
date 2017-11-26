@@ -68,6 +68,27 @@ namespace an34e_project.Models
             return lst;
         }
 
+        public static Customer SelectById(int id)
+        {
+
+            var Db = ConfigurationManager.ConnectionStrings["db"].ConnectionString.ToString();
+            var connection = new SqlConnection(Db);
+            connection.Open();
+
+            var cmd = new SqlCommand("select * from customers where id = @id", connection);
+            cmd.Parameters.Add(new SqlParameter("@id", id) { DbType = DbType.Int32 });
+
+            SqlDataReader dt = cmd.ExecuteReader();
+            dt.Read();
+            var obj = new Customer();
+            obj.Id = dt.GetInt32(0);
+            obj.Name = dt.GetString(1);
+            obj.Responsible= dt.GetString(2);
+            obj.CustomerSince = dt.GetDateTime(3);
+            connection.Close();
+            return obj;
+        }
+
     }
 
 }

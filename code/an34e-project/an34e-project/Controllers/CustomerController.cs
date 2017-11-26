@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace an34e_project.Controllers
 {
@@ -25,5 +26,20 @@ namespace an34e_project.Controllers
 
             return (response) ? Content("{\"success\":true}", "application/json") : Content("{\"success\":false}", "application/json");
         }
+        public ContentResult LoadCustomer(int id)
+        {
+
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            var customer = Customer.SelectById(Convert.ToInt32(id));
+
+            return Content(serializer.Serialize(customer).ToString());
+        }
+        //public ActionResult Edit(Int32 Id, String Quest, Int32 Level, Int32 RequiredLevel, Boolean Removed)
+        //{
+
+        //    var user = new Question().Update(Id, Quest, Level, RequiredLevel, Removed);
+
+        //    return Index();
+        //}
     }
 }

@@ -115,10 +115,10 @@ function validate() {
 
 }
 
-var currentCustomer = 0;
 function ShowCustomer(IdCustomer) {
+    var currentCustomer = 0;
     $.ajax({
-        url: '/Customer/GetCustomerEdit',
+        url: '/Customer/LoadCustomer',
         type: 'POST',
         data: { Id: IdCustomer, },
         error: function () {
@@ -132,18 +132,12 @@ function ShowCustomer(IdCustomer) {
 
             var obj = JSON.parse(customer);
             currentCustomer = obj.Id;
-            $('#titleShow').val(obj.Title);
+            $('#nameShow').val(obj.Name);
             $('#responsibleShow').val(obj.Responsible);
-            $('#emailShow').val(obj.Email);
-            $('#phoneShow').val(obj.Phone);
-
-            $('#areaShow').val(obj.Area.Title);
-
+            $('#sinceDateShow').val(obj.CustomerSince); 
         }
     });
 }
-
-
 
 function editCustomer() {
 
