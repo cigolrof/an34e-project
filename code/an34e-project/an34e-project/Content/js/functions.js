@@ -395,7 +395,36 @@ function SearchNextQuest(){
             }
         });
     }
+}
 
+function BtnAvaliation() {
+    var pergunta2 = $('#resposta2').val();
+    if (pergunta2.length > 0) {
+        $('#btnAvaliation').show();
+    }
+}
+
+function saveAvaliation() {
+    //$.ajax({
+    //    url: '/Avaliation/Insert',
+    //    type: 'POST',
+    //    data: {
+    //        Question1: $("#pergunta1").val(),
+    //        Question2: $("#pergunta2").val()            
+
+    //    },
+    //    error: function () {
+    //        alert("Não foi possível realizar a operação!\nHouve um problema no envio da sua requisição!");
+
+    //    },
+    //    success: function (data) {
+    //        if (data == "{success:True}") {
+    //            alert("Pergunta cadastrada com sucesso!");
+    //            window.location.replace("/Home/Avaliation");
+    //        } else
+    //            alert("Não foi possível realizar a avaliação.");
+    //    }
+    //});
 }
 
 
