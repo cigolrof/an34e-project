@@ -4,7 +4,7 @@ using an34e_project.Models;
 
 namespace an34e_project.Controllers
 {
-    public class UserRepository
+    public class UserRepository: BaseController
     {
         public IEnumerable<User> ListAll()
         {

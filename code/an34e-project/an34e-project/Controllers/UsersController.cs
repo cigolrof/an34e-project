@@ -7,7 +7,7 @@ using System.Web.Security;
 
 namespace an34e_project.Controllers
 {
-    public class UsersController : Controller
+    public class UsersController : BaseController
     {
         public ActionResult Login(FormCollection formData)
         {
