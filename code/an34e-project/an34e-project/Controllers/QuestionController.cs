@@ -9,7 +9,8 @@ using System.Web.Mvc;
 using System.Web.Script.Serialization;
 
 namespace an34e_project.Controllers {
-    public class QuestionController : Controller {
+    public class QuestionController : BaseController
+    {
         public ActionResult Index() {
 
             var lst = new Question().ListQuestions();

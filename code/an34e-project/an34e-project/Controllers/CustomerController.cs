@@ -8,7 +8,7 @@ using System.Web.Script.Serialization;
 
 namespace an34e_project.Controllers
 {
-    public class CustomerController : Controller
+    public class CustomerController : BaseController
     {
         Customer customer = new Customer();
         public ActionResult Index()

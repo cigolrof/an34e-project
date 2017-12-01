@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace an34e_project.Controllers
 {
-    public class AvaliationsParticipantsController : Controller
+    public class AvaliationsParticipantsController : BaseController
     {
         public ActionResult Index()
         {
