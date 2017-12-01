@@ -52,6 +52,7 @@ create table dbo.questions(
 	,level int
 	,level_required int
 	,removed int NOT NULL default(0)
+	,is_nps bit NULL
 	,constraint pk_id_questions primary key(id)
 )
 go

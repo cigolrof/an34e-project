@@ -103,5 +103,24 @@ namespace an34e_project.Models {
             connection.Close();
             return obj;
         }
+        public static Question SelectQuestion(int level, int requiredLevel, int isNps) {
+
+            var Db = ConfigurationManager.ConnectionStrings["db"].ConnectionString.ToString();
+            var connection = new SqlConnection(Db);
+            connection.Open();
+
+            var cmd = new SqlCommand("select t.question from questions t where t.removed = 0 and t.level = @level and t.level_required = @level_required and is_nps = @isNps", connection);
+            cmd.Parameters.Add(new SqlParameter("@level", level) { DbType = DbType.Int32 });
+            cmd.Parameters.Add(new SqlParameter("@level_required", requiredLevel) { DbType = DbType.Int32 });
+            cmd.Parameters.Add(new SqlParameter("@isNps", isNps) { DbType = DbType.Int32 });
+
+            SqlDataReader dt = cmd.ExecuteReader();
+            dt.Read();
+            var obj = new Question();            
+            obj.Quest = dt.GetString(0);
+
+            connection.Close();
+            return obj;
+        }
     }
 }

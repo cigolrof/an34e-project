@@ -327,3 +327,8 @@ function btnLogoff() {
         success: function (data) { }
     });
 }
+
+
+
+document.readyState('comboClientes')
+

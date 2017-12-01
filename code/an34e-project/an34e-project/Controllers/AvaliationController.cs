@@ -12,5 +12,11 @@ namespace an34e_project.Controllers
         {
             return View();
         }
+        public ContentResult QueryQuestionNps(int level, int requiredLevel, int isNps) {
+
+            var x = Models.Question.SelectQuestion(level, requiredLevel, isNps);
+
+            return null;
+        }
     }
 }
