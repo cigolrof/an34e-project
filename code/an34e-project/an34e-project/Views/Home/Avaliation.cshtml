@@ -6,7 +6,6 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-
 <div class="content">
     <div class="container-fluid">
         <div class="col-md-12">
@@ -28,90 +27,19 @@
                 <div id="divPergunta1" class="content" hidden>
                     <div>
                         <h4 id="pergunta1"></h4>
-                        <input id="resposta1" name="" type="text"/>
+                        <input id="resposta1" style="width:10%" type="number" onchange="SearchNextQuest()"/>
+                    </div>
+                </div>
+                <div id="divPergunta2" class="content" hidden>
+                    <div>
+                        <h4 id="pergunta2"></h4>
+                        <textarea id="resposta2" style="width:40%"></textarea>
                     </div>
                 </div>
             </div>
         </div>
-
-        @*<div class="text-center">
-                <a href="#"> <i class="pe-7s-angle-left-circle"></i></a>  <h4>Mês de Ano</h4> <a href="#"><i class="pe-7s-angle-right-circle"></i></a>
-            </div>*@
-        @*@foreach (var item in ViewBag.Areas)
-            {
-                <div class="card container col-md-10 col-md-offset-1">
-                    <h4>@item.Title</h4>
-                    <button data-area-id="@item.Id" onclick="setIdModal(@item.Id)"  id="addEvaluation" type="button" class="btn btn-primary btn-sm " data-toggle="modal" data-target="#modalEvaluation" style="margin-bottom:10px;">
-                        Cadastrar Nova Avaliação
-                    </button>
-                    <div class="content table-responsive table-full-width">
-
-                        <table class="table table-hover table-striped">
-                            <thead>
-                            <th>Cod</th>
-                            <th>Status</th>
-                            <th>P / D / N</th>
-                            <th>Referencia</th>
-                            <th>Opções</th>
-
-                            @*<tbody>
-                                @foreach (var evaluation in Model)
-                                {
-
-
-                                    <tr>
-                                        @if (evaluation.Area.Id == item.Id)
-                                        {
-                                            <td>@evaluation.Id</td>
-                                            <td>@evaluation.Status</td>
-                                            <td>@evaluation.Promotores / @evaluation.Detratores / @evaluation.Neutros</td>
-                                            <td>@evaluation.ReferenceDate.ToString("MM/yy")</td>
-                                            <input id="date" name="date" type="hidden" value="@evaluation.ReferenceDate"/>
-                                            <td>
-                                                <button class="btn btn-default" onclick="realizarAvaliacao(@evaluation.Id, @item.Id)" data-toggle="modal" data-target="#modalEvaluationAnswer">Realizar</button>
-                                                <button class="btn btn-warning">Finalizar</button>
-                                                <button class="btn btn-danger">Excluir</button>
-                                            </td>
-                                        }
-
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
-                @*<li><a href="/Home/Customers?IdArea=@item.Id">@item.Title</a></li>
-            }*@
-
-
     </div>
 </div>
-
-<script>
-    function realizarAvaliacao(idEvaluation, idArea) {
-        //alert(idEvaluation + " " + idArea);
-        date = $('#date').val();
-
-        $.ajax({
-            url: '/Home/AvaliableCustomers?idEvaluation=' + idEvaluation + '&idArea=' + idArea,
-            type: 'POST',
-            data: {
-                idEvaluation: idEvaluation,
-                idArea: idArea,
-                referenceDate: date
-            },
-            error: function () {
-                alert("Não foi possível realizar a operação! Ajax");
-
-            },
-            success: function (customer) {
-                window.location.replace('/Home/AvaliableCustomers?idEvaluation=' + idEvaluation + '&idArea=' + idArea);
-
-            }
-        });
-    }
-</script>
 
 
 
