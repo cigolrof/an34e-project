@@ -145,7 +145,6 @@ function editCustomer() {
     $.ajax({
         url: '/Customer/GetCustomerEdit?id=' + currentCustomer,
         type: 'GET',
-        //data: { Id: IdCustomer },
         error: function () {
             alert("Não foi possível realizar a operação!");
 
@@ -161,7 +160,6 @@ function editCustomer() {
             $('#responsible').val(obj.Responsible);
             $('#email').val(obj.Email);
             $('#phone').val(obj.Phone);
-            //$('#since').val(obj.Since);
             $('#area').val(obj.Area.Title);
 
         }
@@ -178,7 +176,6 @@ function clearForm() {
     $('#responsible').val('');
     $('#email').val('');
     $('#phone').val('');
-    //$('#area').val('');
 }
 
 function deleteCustomer() {
@@ -186,7 +183,6 @@ function deleteCustomer() {
     $.ajax({
         url: '/Customer/DeleteCustomer?id=' + currentCustomer,
         type: 'POST',
-        //data: { Id: IdCustomer },
         error: function () {
             alert("Não foi possível realizar a operação!");
 
@@ -345,7 +341,7 @@ function SearchQuest(level, requiredLevel, isNps) {
             $('#divPergunta1').show();
 
             var obj = JSON.parse(avaliation);
-            $('#pergunta1').val() = obj.Quest;            
+            $('#pergunta1').text(obj);
         }
     });
 }
