@@ -11,7 +11,7 @@ namespace an34e_project.Controllers
         protected override void OnAuthorization(AuthorizationContext filterContext)
         {
             var url = Request.RawUrl;
-            var lstPages = new List<String>() { "/Home/Login" };
+            var lstPages = new List<String>() { "/Home/Login", "/Users/Login" };
             var loginRequired = !lstPages.Any(page => url.StartsWith(page));
             if (loginRequired && Session["User"] == null)
                 filterContext.Result = new RedirectResult("/Home/Login");
