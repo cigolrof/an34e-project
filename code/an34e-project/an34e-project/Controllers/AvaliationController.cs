@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace an34e_project.Controllers
 {
@@ -14,9 +15,10 @@ namespace an34e_project.Controllers
         }
         public ContentResult QueryQuestionNps(int level, int requiredLevel, int isNps) {
 
-            var x = Models.Question.SelectQuestion(level, requiredLevel, isNps);
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            var cmd = Models.Question.SelectQuestion(level, requiredLevel, isNps);
 
-            return null;
+            return Content(serializer.Serialize(cmd.Quest).ToString());            
         }
     }
 }

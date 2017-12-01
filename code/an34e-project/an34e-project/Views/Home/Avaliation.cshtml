@@ -19,15 +19,16 @@
                 </div>
                 <div class="content">
                     <div>
-                        <select id="comboClientes" hidden>
+                        <select id="comboClientes" onchange="SearchQuest(1,0,1)" hidden>
                             <option value="01">Cliente 1</option>
                             <option value="02">Cliente 2</option>
                         </select>
                     </div>
                 </div>
-                <div class="content">
+                <div id="divPergunta1" class="content" hidden>
                     <div>
-                        <h3></h3>
+                        <h3 id="pergunta1"></h3>
+                        <input id="resposta1" name="" type="text"/>
                     </div>
                 </div>
             </div>

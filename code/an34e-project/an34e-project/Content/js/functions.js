@@ -330,5 +330,24 @@ function btnLogoff() {
 
 
 
-document.readyState('comboClientes')
+//document.readyState('comboClientes')
+
+function SearchQuest(level, requiredLevel, isNps) {
+    $.ajax({
+        url: '/Avaliation/QueryQuestionNps',
+        type: 'POST',
+        data: { level: level, requiredLevel: requiredLevel, isNps: isNps},
+        error: function () {
+            alert("Não foi possível encontrar a a pergunta!");
+
+        },
+        success: function (avaliation) {
+            $('#divPergunta1').show();
+
+            var obj = JSON.parse(avaliation);
+            $('#pergunta1').val() = obj.Quest;            
+        }
+    });
+}
+
 
