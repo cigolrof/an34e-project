@@ -131,8 +131,11 @@ function ShowCustomer(IdCustomer) {
             var obj = JSON.parse(customer);
             currentCustomer = obj.Id;
             $('#nameShow').val(obj.Name);
+            $('#nameShow').prop('disabled', false);
             $('#responsibleShow').val(obj.Responsible);
-            $('#sinceDateShow').val(obj.CustomerSince); 
+            $('#responsibleShow').prop('disabled', false);
+            $('#sinceDateShow').val(obj.CustomerSince);
+            $('#sinceDateShow').prop('disabled', false);
         }
     });
 }
